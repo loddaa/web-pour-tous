@@ -1,0 +1,240 @@
+html {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+* {
+    --bg-light: rgb(249 250 251);
+    --bg-dark: rgb(17 24 39);
+    --text-dark: rgb(55 65 81);
+    --text-light: rgb(209 213 219);
+
+    --px-section-desktop: 7%;
+    --py-section-desktop: 50px;
+
+    --accent-color: rgba(20, 110, 245, 0.95);
+    
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.display-none {
+    display: none;
+}
+
+.relative {
+    position: relative;
+}
+
+.light-theme {
+    background-color: var(--bg-light);
+    color: var(--text-dark)
+}
+
+.dark-theme {
+    background-color: var(--bg-dark);
+    color: var(--text-light)
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+    font-size: 16px;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+body.light-theme header {
+    background-color: var(--bg-light);
+    border-bottom: 1px solid rgba(55, 65, 81, .2);
+}
+
+body.dark-theme header {
+    background-color: var(--bg-dark);
+    border-bottom: 1px solid rgba(209, 213, 219, .2);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 50px;
+}
+
+.light-theme-switch {
+    background: var(--bg-dark);
+    color: var(--text-light);
+    border: none;
+    text-align: center;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 1rem;
+    border-radius: 50%; 
+}
+
+.dark-theme-switch {
+    background: var(--bg-light);
+    color: var(--text-dark);
+    border: none;
+    text-align: center;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 1rem;
+    border-radius: 50%; 
+}
+
+nav {
+    padding: 10px var(--px-section-desktop);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.banner {
+    background-color: var(--accent-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner .price-crossed {
+    margin: 0 5px;
+    text-decoration: line-through;
+}
+.banner .price {
+    font-weight: bolder;
+    font-size: large;
+}
+
+.hero {
+    padding: var(--py-section-desktop) var(--px-section-desktop);
+    display: flex;
+    gap: 30px;
+}
+
+.hero h1 {
+    margin-bottom: 0;
+    font-size: 36px;
+}
+.hero h2 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.hero > div:nth-of-type(1),
+.hero > div:nth-of-type(2) {
+    flex-basis: 50%;
+}
+
+.hero > div:nth-of-type(1) {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.hero div:nth-of-type(2) {
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+.hero .cta {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.hero .cta button {
+    padding: 15px 20px;
+    border-radius: 100px;
+}
+
+/* .hero .cta div {
+    flex: 1;
+} */
+
+.hero .cta .cta-primary {
+    border: 1px solid var(--accent-color);
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.hero .cta .cta-secondary {
+    border: 1px solid var(--accent-color);
+    background: none;
+    color: inherit;
+}
+
+.about {
+    padding: var(--py-section-desktop) var(--px-section-desktop);
+    display: flex;
+    gap: 10px;
+}
+
+.about .relative {
+    width: fit-content;
+    flex-basis: 50%;
+}
+
+.about .relative > img:first-of-type {
+    width: 500px;
+    object-fit: cover;
+    border-radius: 0 50% 50% 0;
+}
+.about .relative > img:nth-of-type(2) {
+    position: absolute;
+    top: 0;
+    right: 130px;
+    border: 7px solid white;
+    min-width: 150px;
+    min-height: 150px;
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 50%;
+}
+
+.about-content {
+    flex-basis: 50%;
+}
+
+.about-content .title {
+    font-size: 45px;
+    font-weight: 600;
+}
+
+.about-content .subtitle {
+    font-size: 25px;
+}
