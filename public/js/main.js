@@ -1,5 +1,7 @@
 let lightSwitch = document.getElementsByClassName('light-theme-switch').item(0)
+let lightSwitchIcon = document.getElementsByClassName('light-theme-switch').item(0).firstElementChild
 let darkSwitch = document.getElementsByClassName('dark-theme-switch').item(0)
+let darkSwitchIcon = document.getElementsByClassName('dark-theme-switch').item(0).firstElementChild
 
 function darkTheme() {
     lightSwitch.classList.add('display-none')
@@ -20,9 +22,11 @@ function lightTheme() {
 document.addEventListener('click', function(e) {
     switch (e.target) {
         case lightSwitch:
+        case lightSwitchIcon:
                 darkTheme()
             break;
             case darkSwitch:
+            case darkSwitchIcon:
                 lightTheme()
             break;
     }

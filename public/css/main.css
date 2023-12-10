@@ -13,6 +13,9 @@ html {
     --bg-dark: black;
     --text-dark: black;
     --text-light: white;
+
+    --px-section-desktop: 7%;
+    --py-section-desktop: 50px; 
 }
 
 .display-none {
@@ -28,3 +31,36 @@ html {
     background-color: var(--bg-dark);
     color: var(--text-light)
 }
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 50px;
+}
+
+nav {
+    padding: 10px var(--px-section-desktop);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+
