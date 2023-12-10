@@ -9,13 +9,15 @@ html {
 }
 
 * {
-    --bg-light: white;
-    --bg-dark: black;
-    --text-dark: black;
-    --text-light: white;
+    --bg-light: rgb(249 250 251);
+    --bg-dark: rgb(17 24 39);
+    --text-dark: rgb(55 65 81);
+    --text-light: rgb(209 213 219);
 
     --px-section-desktop: 7%;
-    --py-section-desktop: 50px; 
+    --py-section-desktop: 50px;
+    
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .display-none {
@@ -50,6 +52,30 @@ nav ul {
     gap: 50px;
 }
 
+.light-theme-switch {
+    background: var(--bg-dark);
+    color: var(--text-light);
+    border: none;
+    text-align: center;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 1rem;
+    border-radius: 50%; 
+}
+
+.dark-theme-switch {
+    background: var(--bg-light);
+    color: var(--text-dark);
+    border: none;
+    text-align: center;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 1rem;
+    border-radius: 50%; 
+}
+
 nav {
     padding: 10px var(--px-section-desktop);
     display: flex;
@@ -63,4 +89,6 @@ nav {
     gap: 50px;
 }
 
+.hero {
 
+}
