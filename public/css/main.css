@@ -1,0 +1,30 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+* {
+    --bg-light: white;
+    --bg-dark: black;
+    --text-dark: black;
+    --text-light: white;
+}
+
+.display-none {
+    display: none;
+}
+
+.light-theme {
+    background-color: var(--bg-light);
+    color: var(--text-dark)
+}
+
+.dark-theme {
+    background-color: var(--bg-dark);
+    color: var(--text-light)
+}
