@@ -37,6 +37,7 @@ html {
 a {
     text-decoration: none;
     color: inherit;
+    cursor: pointer;
 }
 
 header {
@@ -87,6 +88,23 @@ nav {
     display: flex;
     align-items: center;
     gap: 50px;
+}
+
+.banner {
+    background-color: blanchedalmond;
+    color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 0;
+}
+
+.banner .price-crossed {
+    margin: 0 5px;
+    text-decoration: line-through;
+}
+.banner .price {
+    font-weight: bolder;
 }
 
 .hero {
